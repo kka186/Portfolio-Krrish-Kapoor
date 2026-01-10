@@ -19,15 +19,9 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
 - Granta EduPack
 - Arduino
 
-
 ---
 
 ## 📌 Projects
-
----
-## 📌 Projects
-
-
 
 ---
 
@@ -242,7 +236,7 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
 
 ## 📫 Contact & Links
 
-- 💼 LinkedIn: *(https://www.linkedin.com/in/krrish-kapoor-957b07310/)*
+- 💼 LinkedIn: *https://www.linkedin.com/in/krrish-kapoor-957b07310/*
 - 📧 Email: kka186@sfu.ca
 
 ---
