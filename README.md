@@ -26,7 +26,7 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
 
 > Tip: Put your images in `/images/` and reference them like `images/filename.png`.
 /images/
-wing_cad.png
+cad_model_of_wing.png
 material_properties.png
 wing_fbd_front.png
 wing_fbd_beam.png
