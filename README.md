@@ -93,7 +93,7 @@ The objective was to examine the first-order transient response of a multi-resis
 measure the time constant. The circuit topology included a switch where I must validate discharging and charging behaviour of the system. 
   <p align="center">
     <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/multisim_circuit.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
-    <sub>Multisim schematic of the multi-resistor RC circuit.</sub>
+    <sub>Multi-resistor RC circuit schematic with a dependent source.</sub>
   </p>
 </details>
 
@@ -105,7 +105,7 @@ measure the time constant. The circuit topology included a switch where I must v
 
   <p align="center">
     <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/circuit_schematic.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
-    <sub>Simplified circuit representation used for analytical modeling.</sub>
+    <sub>Multisim circuit schematic with the function generator and oscilloscope connected.</sub>
   </p>
 </details>
 
@@ -197,7 +197,7 @@ measure the time constant. The circuit topology included a switch where I must v
 
   <p align="center">
     <img src="images/Aircraft Turbine Fan Blade/blade_cavity.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
-    <sub>Fan blade geometry and cavity region considered during material selection.</sub>
+    <sub>Simplified fan blade geometry and cavity region considered during material selection.</sub>
   </p>
 </details>
 
@@ -227,7 +227,7 @@ measure the time constant. The circuit topology included a switch where I must v
       </td>
       <td align="center" width="50%">
         <img src="images/Aircraft Turbine Fan Blade/nickelbased_superalloy.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Selected nickel-based superalloy candidate.</sub>
+        <sub>Nickel-based superalloy environmental effects chart.</sub>
       </td>
     </tr>
   </table>
