@@ -41,7 +41,7 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
       </td>
       <td align="center" width="50%">
         <img src="images/Electrical Analogies/FBD_MSD.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Free-body diagram of the beam and OSCAR with one spring used for dynamic modeling.</sub>
+        <sub>Free-body diagram of the beam and OSCAR (one spring) used for dynamic modeling.</sub>
       </td>
     </tr>
   </table>
