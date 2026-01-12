@@ -31,7 +31,9 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
   <summary><b>What?</b></summary>
   <br>
 
-  Modeled the dynamics of a mass–spring–damper system and represented it using an equivalent RLC electrical circuit.
+ The objective of this project was to model and predict the dynamic response of a coupled mechanical system subjected to base excitation, and to demonstrate that its behavior can be accurately represented using an equivalent electrical circuit.
+
+A mass–spring–damper (MSD) system and a flexible vertical beam were experimentally and numerically characterized to extract key system parameters such as natural frequency and damping ratio. These mechanical systems were then converted into equivalent RLC circuits, allowing the same dynamic behavior to be analyzed in the electrical domain. The final goal was to validate that the combined MSD–beam system and its electrical analog exhibit consistent transient and frequency-response characteristics under base excitation.
 
   <table align="center">
     <tr>
@@ -51,7 +53,7 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
   <summary><b>How?</b></summary>
   <br>
 
-  Identified natural frequency and damping from response trends, then mapped mechanical parameters to electrical components.
+  Using MATLAB and Simulink with given codes, we gave a step input to OSCAR where a response would be shown on a graph through the software. We took multiple trials using different spring constants and settled with one trial using 1226N/m as the spring constant. We extracted system parameters using the logarthmic decrement method and mapped these parameters to equivalent RLC circuit values. The beam would have its own RLC values creating a parallel circuit with the MSD values. The circuits voltages were measured where CH 1 was the MSD's capacitor voltage and CH 2 was the beam's capacitor voltage and square and sine wave inputs at differing frequencies were used to analyze the amplitudes and phase shifts among the frequency response.   
 
   <p align="center">
     <img src="images/Electrical Analogies/rlc_conversion.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
@@ -87,8 +89,8 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
   <summary><b>What?</b></summary>
   <br>
 
-  Investigated how resistor network topology affects the transient response of an RC circuit by analyzing a multi-resistor configuration.
-
+The objective was to examine the first-order transient response of a multi-resistor circuit containing a dependent source by utilizing Thevenin’s theory to
+measure the time constant. The circuit topology included a switch where I must validate discharging and charging behaviour of the system. 
   <p align="center">
     <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/multisim_circuit.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
     <sub>Multisim schematic of the multi-resistor RC circuit.</sub>
@@ -99,7 +101,7 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
   <summary><b>How?</b></summary>
   <br>
 
-  Applied step excitation within Multisim and analyzed voltage response. Compared simulated behavior with hand calculations using equivalent resistance methods.
+  An applied step excitation to the circuit created in Multisim was used to further analyze the charging behaviour and obtain the time constant of the system. Using voltage and time cursors on the oscilliscope would then yield the effective time constant of the system. To validate theoretical predictions, I compared simulated behavior with hand calculations using equivalent resistance methods.
 
   <p align="center">
     <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/circuit_schematic.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
@@ -111,7 +113,7 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
   <summary><b>Result</b></summary>
   <br>
 
-  Extracted an effective time constant from simulation and demonstrated how network topology alters transient response.
+  The time constant came out to be 400ms and matched theoretical predictions with zero error.
 
   <p align="center">
     <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/time_constant.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
