@@ -1,6 +1,6 @@
 # 👋 Hi, I’m Krrish Kapoor
 
-🎓 **Mechatronic Systems Engineering Student**  
+🎓**Mechatronic Systems Engineering Student**  
 📍 Langley, BC | Simon Fraser University  
  Mechanical • Electrical • Computational Systems
 
