@@ -1,0 +1,37 @@
+%Free Damped
+
+clear; clc; close all;
+
+m = 0.045; k = 26; zeta = 0.25;
+c = 2*zeta*sqrt(k*m);
+
+dt = 0.001;
+t = 0:dt:5;
+
+x = zeros(size(t));
+v = zeros(size(t));
+
+x(1) = 0.05;   % initial displacement
+v(1) = 0;      % initial velocity
+x(2) = x(1) + v(1)*dt;
+
+a1 = m/dt^2 + c/(2*dt);
+a2 = 2*m/dt^2 - k;
+a3 = c/(2*dt) - m/dt^2;
+
+for i = 2:length(t)-1
+    F = 0;
+    x(i+1) = (F + a2*x(i) + a3*x(i-1)) / a1;
+    v(i) = (x(i+1) - x(i-1))/(2*dt);
+end
+
+figure;
+subplot(2,1,1); plot(t,x,'LineWidth',1.5); grid on;
+xlabel("Time"); ylabel("x(t)");
+title("Free Damped Vibration");
+
+subplot(2,1,2); plot(t,v,'LineWidth',1.5); grid on;
+xlabel("Time"); ylabel("v(t)");
+
+
+
