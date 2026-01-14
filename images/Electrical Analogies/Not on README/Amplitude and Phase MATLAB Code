@@ -1,0 +1,26 @@
+% Data
+f = [500 1000 3000 7000 8000 100000 150000];
+
+ch1 = [840 448 168 80 72 56.8 41.6];
+ch2 = [14.6 16 17.6 32.8 32.8 17 4.48];
+phase = [273.5 266.9 291.2 342.2 19.6 71.63 95.73];
+
+figure
+
+% --- Amplitude plot ---
+subplot(2,1,1)
+semilogx(f, ch1, '-', 'LineWidth', 1.5); hold on
+semilogx(f, ch2, '-', 'LineWidth', 1.5)
+grid on
+xlabel('Frequency (Hz)')
+ylabel('Amplitude (mV)')
+title('Output Amplitude vs Frequency')
+legend('Channel 1','Channel 2','Location','best')
+
+% --- Phase plot ---
+subplot(2,1,2)
+semilogx(f, phase, '-', 'LineWidth', 1.5)
+grid on
+xlabel('Frequency (Hz)')
+ylabel('Phase Shift (degrees)')
+title('Phase Shift vs Frequency')
