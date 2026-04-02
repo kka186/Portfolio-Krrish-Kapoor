@@ -84,6 +84,22 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
 
 ---
 
+# verdant - Environmental Monitoring Platform
+
+<details>
+  <summary><b>What?</b></summary>
+  <br>
+
+  The objective of this project was to design and develop a climate resilience dashboard that could help companies, city agencies, and urban planners identify urban heat islands and make more informed decisions about green infrastructure investment. Verdant was created to transform environmental and geospatial data into an interactive platform that supports organizations in locating high-risk urban areas and evaluating where cooling interventions may have the greatest impact.
+
+  By combining urban temperature data, regional comparisons, and map-based visualization, the platform was intended to provide decision-makers with a clear overview of climate-related conditions across a city. The project focused on making large-scale environmental data more accessible and actionable through an intuitive interface that supports climate-conscious planning for green spaces, vegetation, and other resilience strategies.
+
+  <p align="center">
+    <img src="images/Verdant/landing-page.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <sub>Verdant landing page introducing the platform’s focus on climate resilience and urban heat analysis.</sub>
+  </p>
+</details>
+
 # Transient Response of Multi-Resistor RC Circuits Using Multisim
 
 <details>
