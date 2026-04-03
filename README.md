@@ -86,7 +86,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
 
 ---
 
-# verdant - Environmental Monitoring Platform
+# Verdant - Environmental Monitoring Platform
 
 <details>
   <summary><b>What?</b></summary>
@@ -111,7 +111,7 @@ Verdant was developed by integrating open-source environmental data, geospatial 
 The platform was structured as a web-based dashboard so that complex climate data could be translated into a format that companies, agencies, and planning stakeholders could use more effectively. Interactive layers, charts, and recommendation panels were incorporated to help users compare regions, assess projected cooling impacts, and identify where investments in vegetation, parks, water features, or other infrastructure strategies may provide the greatest benefit.
 
   <p align="center">
-    <img src="images/Verdant/how-dashboard.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <img src="images/Verdant/how-layer-dashboard.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
     <sub>Interactive Verdant dashboard showing geospatial heat mapping, hotspot analysis, and green infrastructure recommendations for urban planning.</sub>
   </p>
 </details>
