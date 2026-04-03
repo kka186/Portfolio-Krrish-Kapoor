@@ -92,9 +92,9 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
   <summary><b>What?</b></summary>
   <br>
 
-The objective of this project was to design and develop a climate resilience dashboard that could help companies, city agencies, and urban planners identify urban heat islands and make more informed decisions about green infrastructure investment. Verdant was created to transform environmental and geospatial data into an interactive platform that supports organizations in locating high-risk urban areas and evaluating where cooling interventions may have the greatest impact.
+  The objective of this project was to design and develop a climate resilience dashboard that helps companies, city agencies, and urban planners identify urban heat islands and make more informed green infrastructure decisions. Verdant was created to transform environmental and geospatial data into an interactive platform for locating high-risk areas and evaluating where cooling interventions may have the greatest impact.
 
-By combining urban temperature data, regional comparisons, and map-based visualization, the platform was intended to provide decision-makers with a clear overview of climate-related conditions across a city. The project focused on making large-scale environmental data more accessible and actionable through an intuitive interface that supports climate-conscious planning for green spaces, vegetation, and other resilience strategies.
+  By combining urban temperature data, regional comparisons, and map-based visualization, the platform provides decision-makers with a clear view of climate-related conditions across a city. The project focused on making large-scale environmental data accessible and actionable through an interface that supports climate-conscious planning.
 
   <p align="center">
     <img src="images/Verdant/landing-page.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
@@ -106,29 +106,39 @@ By combining urban temperature data, regional comparisons, and map-based visuali
   <summary><b>How?</b></summary>
   <br>
 
-Verdant was developed by integrating open-source environmental data, geospatial mapping tools, and an interactive web interface into a single climate analysis platform. Public satellite and sensor API's from NASA were used to evaluate urban temperature conditions, while 3D map-based visualization was used to display heat-risk patterns, hotspot zones, vulnerable areas, and potential green infrastructure opportunities across different parts of a city.
+  Verdant was developed by combining open-source environmental data, geospatial mapping tools, and an interactive web interface into a single climate analysis platform. Public satellite and sensor APIs from NASA were used to evaluate urban temperature conditions, while 3D map-based visualization displayed heat-risk patterns, hotspot zones, vulnerable areas, and potential green infrastructure opportunities.
 
-The platform was structured as a web-based dashboard so that complex climate data could be translated into a format that companies, agencies, and planning stakeholders could use more effectively. Interactive layers, charts, and recommendation panels were incorporated to help users compare regions, assess projected cooling impacts, and identify where investments in vegetation, parks, water features, or other infrastructure strategies may provide the greatest benefit.
+  The platform was structured as a web-based dashboard so that complex climate data could be translated into a format that companies, agencies, and planning stakeholders could use effectively. Interactive layers, charts, and recommendation panels were incorporated to help users compare regions, assess projected cooling impacts, and identify where infrastructure investments may provide the greatest benefit.
 
-  <p align="center">
-    <img src="images/Verdant/how-layer-dashboard.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
-    <sub>Interactive Verdant dashboard showing geospatial heat mapping, hotspot analysis, and green infrastructure recommendations for urban planning.</sub>
-  </p>
+  <table align="center">
+    <tr>
+      <td align="center" width="50%">
+        <img src="images/Verdant/how-layer-dashboard.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Dashboard view showing map layers, geospatial heat mapping, and hotspot analysis.</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="images/Verdant/how-3d-dashboard.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>3D visualization used to analyze hotspot zones and infrastructure opportunities.</sub>
+      </td>
+    </tr>
+  </table>
 </details>
 
 <details>
   <summary><b>Result</b></summary>
   <br>
 
-  The final outcome of this project was a functional climate resilience dashboard capable of visualizing urban heat patterns, identifying hotspot zones, and presenting green infrastructure recommendations through an interactive interface. Verdant translated raw environmental and geospatial data into a usable planning tool that allows companies, agencies, and other stakeholders to compare regions, evaluate vulnerability, and assess where cooling strategies may provide the greatest benefit. :contentReference[oaicite:0]{index=0}
+  The final outcome of this project was a functional climate resilience dashboard capable of visualizing urban heat patterns, identifying hotspot zones, and presenting green infrastructure recommendations through an interactive interface. Verdant translated raw environmental and geospatial data into a usable planning tool for comparing regions, evaluating vulnerability, and assessing where cooling strategies may provide the greatest benefit.
 
-  The completed platform demonstrated a clear application of environmental data analysis, geospatial visualization, and user-focused dashboard design within a real urban planning context. As a result of its scalability and practical value, Verdant was recognized at XHacks 2026 where it received the **[SFU SURGE] Systems for Scale** award. :contentReference[oaicite:1]{index=1}
+  The completed platform demonstrated a practical application of environmental data analysis, geospatial visualization, and user-focused dashboard design. Verdant was recognized at XHacks 2026, where it received the **[SFU SURGE] Systems for Scale** award.
 
   <p align="center">
     <img src="images/Verdant/result-dashboard.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
-    <sub>Final Verdant dashboard showing hotspot mapping, environmental metrics, and green infrastructure recommendations for climate-informed planning.</sub>
+    <sub>Final Verdant dashboard showing hotspot mapping, environmental metrics, and green infrastructure recommendations.</sub>
   </p>
 </details>
+
+---
 
 # Transient Response of Multi-Resistor RC Circuits Using Multisim
 
