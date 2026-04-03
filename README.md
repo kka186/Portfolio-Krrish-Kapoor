@@ -130,7 +130,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
 
   The final outcome of this project was a functional climate resilience dashboard capable of visualizing urban heat patterns, identifying hotspot zones, and presenting green infrastructure recommendations through an interactive interface. Verdant translated raw environmental and geospatial data into a usable planning tool for comparing regions, evaluating vulnerability, and assessing where cooling strategies may provide the greatest benefit.
 
-  The completed platform demonstrated a practical application of environmental data analysis, geospatial visualization, and user-focused dashboard design. Verdant was recognized at XHacks 2026, where it received the **[SFU SURGE] Systems for Scale** award.
+  The completed platform demonstrated a practical application of environmental data analysis, geospatial visualization, and user-focused dashboard design. Verdant was recognized at XHacks 2026, where it received the **SFU SURGE Systems for Scale** award.
 
   <p align="center">
     <img src="images/Verdant/result-dashboard.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
