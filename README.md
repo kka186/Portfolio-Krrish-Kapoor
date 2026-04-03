@@ -13,7 +13,6 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
 **Programming & Computation**
 - Python
 - MATLAB
-- TypeScript
 - Git
 
 **Engineering Tools**
