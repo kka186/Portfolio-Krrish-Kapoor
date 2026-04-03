@@ -106,9 +106,12 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
   <summary><b>How?</b></summary>
   <br>
 
-  Verdant was developed by combining open-source environmental data, geospatial mapping tools, and an interactive web interface into a single climate analysis platform. Public satellite and sensor APIs from NASA were used to evaluate urban temperature conditions, while 3D map-based visualization displayed heat-risk patterns, hotspot zones, vulnerable areas, and potential green infrastructure opportunities.
+Verdant was built by combining open-source environmental data, AI-assisted data processing, and web-based geospatial visualization into a single climate analysis platform. Public APIs from NASA were used as the core source of satellite and sensor data for heat mapping, while AI models were used to parse raw environmental data from multiple sources and support the platform’s analysis workflow. OpenStreetMap and Mapbox were then used to translate this data into interactive 2D and 3D maps that highlight hotspot zones, vulnerable areas, and potential green infrastructure opportunities.
 
-  The platform was structured as a web-based dashboard so that complex climate data could be translated into a format that companies, agencies, and planning stakeholders could use effectively. Interactive layers, charts, and recommendation panels were incorporated to help users compare regions, assess projected cooling impacts, and identify where infrastructure investments may provide the greatest benefit.
+The dashboard was developed as a web application using Next.js, React, Tailwind, TanStack Query, and Zustand, with interface and visual design support from Figma and Adobe Illustrator. Interactive layers, charts, and recommendation panels were incorporated so that companies, agencies, and planning stakeholders could compare regions, assess projected cooling impacts, and identify where infrastructure investments may provide the greatest benefit.
+
+  <table align="center">
+    <tr>
 
   <table align="center">
     <tr>
