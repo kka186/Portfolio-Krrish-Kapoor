@@ -136,28 +136,21 @@ measure the time constant. The circuit topology included a switch where I must v
 </details>
 
 ---
+
 # Arduino-Based LED Voltage Safety Indicator
 
 <details>
   <summary><b>What?</b></summary>
   <br>
 
-The objective of this project was to design and build a voltage monitoring prototype that classifies a variable 0 to 5 V input signal into three LED output states. The system was designed to provide real-time visual feedback based on measured voltage ranges, helping show how a simple hardware circuit can respond to changing analog input conditions.
+The objective of this project was to design and build a voltage monitoring prototype that classifies a variable 0 to 5 V input signal into three LED output states. The system was designed to provide real-time visual feedback based on measured voltage ranges, showing how a simple Arduino-based circuit can respond to changing analog input conditions.
 
 The prototype used an Arduino UNO R3, potentiometer, three LEDs, resistors, and breadboard wiring. As the potentiometer adjusted the input voltage, the Arduino read the analog signal and activated the correct LED based on programmed threshold ranges.
 
-  <table align="center">
-    <tr>
-      <td align="center" width="50%">
-        <img src="images/Arduino Voltage Indicator/arduino_setup.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Arduino UNO R3 voltage monitoring prototype built on a breadboard.</sub>
-      </td>
-      <td align="center" width="50%">
-        <img src="images/Arduino Voltage Indicator/circuit_closeup.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Breadboard wiring layout with potentiometer, resistors, and LED output states.</sub>
-      </td>
-    </tr>
-  </table>
+  <p align="center">
+    <img src="images/Arduino Voltage Indicator/arduino project.jpg" width="70%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <sub>Arduino voltage monitoring prototype during LED state-transition testing.</sub>
+  </p>
 </details>
 
 <details>
@@ -166,10 +159,10 @@ The prototype used an Arduino UNO R3, potentiometer, three LEDs, resistors, and 
 
 I built the circuit on a breadboard by connecting the potentiometer to an Arduino analog input pin and wiring three LEDs as digital output indicators. The potentiometer was used to vary the input signal across the 0 to 5 V range, allowing the Arduino to continuously read the changing analog voltage.
 
-I programmed the Arduino to classify the analog voltage reading into low, medium, and high voltage ranges. Each range activated a different LED output state. I then tested the prototype by adjusting the potentiometer and observing whether the LED transitions matched the intended threshold values. During testing, I refined the threshold ranges and troubleshot wiring, LED output issues, and inconsistent state-transition behaviour.
+I programmed the Arduino to convert the analog reading into a voltage value, print the measured potentiometer voltage to the serial monitor, and classify the input into low, medium, and high voltage ranges. Each voltage range activated a different LED output state. I tested the prototype by adjusting the potentiometer and observing whether the LED transitions matched the intended threshold values.
 
   <p align="center">
-    <img src="images/Arduino Voltage Indicator/arduino_code.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <img src="images/Arduino Voltage Indicator/arduino project code.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
     <sub>Arduino threshold logic used to classify analog voltage readings into LED output states.</sub>
   </p>
 </details>
@@ -178,22 +171,15 @@ I programmed the Arduino to classify the analog voltage reading into low, medium
   <summary><b>Result</b></summary>
   <br>
 
-The final prototype successfully provided real-time LED feedback across three voltage states. As the potentiometer changed the input voltage, the Arduino activated the correct LED based on the programmed threshold range. After testing, the output became more reliable by refining the threshold values and fixing inconsistent LED transitions.
+The final prototype successfully provided real-time LED feedback across three voltage states. As the potentiometer changed the input voltage, the Arduino activated the correct LED based on the programmed threshold range. The serial monitor also displayed the measured potentiometer voltage, making it easier to verify the relationship between input voltage and LED output state.
 
 This project strengthened my hands-on experience with Arduino prototyping, circuit design, breadboarding, wiring, hardware testing, troubleshooting, design validation, and technical documentation.
 
-  <table align="center">
-    <tr>
-      <td align="center" width="50%">
-        <img src="images/Arduino Voltage Indicator/led_low_state.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Low-voltage operating state indicated by the first LED output.</sub>
-      </td>
-      <td align="center" width="50%">
-        <img src="images/Arduino Voltage Indicator/led_high_state.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>High-voltage operating state indicated after adjusting the potentiometer input.</sub>
-      </td>
-    </tr>
-  </table>
+  <p align="center">
+    <video src="images/Arduino Voltage Indicator/arduino project test.mov" width="70%" controls></video>
+    <br>
+    <sub>Arduino voltage indicator demo showing LED state transitions as the potentiometer input changes.</sub>
+  </p>
 </details>
 
 ---
