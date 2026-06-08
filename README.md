@@ -180,7 +180,7 @@ The final prototype successfully provided real-time LED feedback across three vo
       <img src="images/Arduino-Based LED Voltage Safety Indicator/arduino project.jpg" width="70%" style="border:1px solid #aaa; padding:4px;" />
     </a>
     <br>
-    <strong>▶ Watch Demo Video</strong>
+    <strong>Click The Thumbnail To Watch Demo Video</strong>
     <br>
     <sub>Arduino voltage indicator demo showing LED state transitions as the potentiometer input changes.</sub>
   </p>
