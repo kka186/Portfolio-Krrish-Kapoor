@@ -148,7 +148,7 @@ The objective of this project was to design and build a voltage monitoring proto
 The prototype used an Arduino UNO R3, potentiometer, three LEDs, resistors, and breadboard wiring. As the potentiometer adjusted the input voltage, the Arduino read the analog signal and activated the correct LED based on programmed threshold ranges.
 
   <p align="center">
-    <img src="images/Arduino Voltage Indicator/arduino project.jpg" width="70%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <img src="images/Arduino-Based LED Voltage Safety Indicator/arduino project.jpg" width="70%" style="border:1px solid #aaa; padding:4px;" /><br>
     <sub>Arduino voltage monitoring prototype during LED state-transition testing.</sub>
   </p>
 </details>
@@ -162,7 +162,7 @@ I built the circuit on a breadboard by connecting the potentiometer to an Arduin
 I programmed the Arduino to convert the analog reading into a voltage value, print the measured potentiometer voltage to the serial monitor, and classify the input into low, medium, and high voltage ranges. Each voltage range activated a different LED output state. I tested the prototype by adjusting the potentiometer and observing whether the LED transitions matched the intended threshold values.
 
   <p align="center">
-    <img src="images/Arduino Voltage Indicator/arduino project code.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <img src="images/Arduino-Based LED Voltage Safety Indicator/arduino project code.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
     <sub>Arduino threshold logic used to classify analog voltage readings into LED output states.</sub>
   </p>
 </details>
@@ -176,7 +176,7 @@ The final prototype successfully provided real-time LED feedback across three vo
 This project strengthened my hands-on experience with Arduino prototyping, circuit design, breadboarding, wiring, hardware testing, troubleshooting, design validation, and technical documentation.
 
   <p align="center">
-    <video src="images/Arduino Voltage Indicator/arduino project test.mov" width="70%" controls></video>
+    <video src="images/Arduino-Based LED Voltage Safety Indicator/arduino project test.mov" width="70%" controls></video>
     <br>
     <sub>Arduino voltage indicator demo showing LED state transitions as the potentiometer input changes.</sub>
   </p>
