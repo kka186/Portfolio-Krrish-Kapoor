@@ -171,16 +171,18 @@ I programmed the Arduino to convert the analog reading into a voltage value, pri
   <summary><b>Result</b></summary>
   <br>
 
-  The final prototype successfully provided real-time LED feedback across three voltage states. As the potentiometer changed the input voltage, the Arduino activated the correct LED based on the programmed threshold range. The serial monitor also displayed the measured potentiometer voltage, making it easier to verify the relationship between input voltage and LED output state.
+The final prototype successfully provided real-time LED feedback across three voltage states. As the potentiometer changed the input voltage, the Arduino activated the correct LED based on the programmed threshold range. The serial monitor also displayed the measured potentiometer voltage, making it easier to verify the relationship between input voltage and LED output state.
 
   This project strengthened my hands-on experience with Arduino prototyping, circuit design, breadboarding, wiring, hardware testing, troubleshooting, design validation, and technical documentation.
 
   <p align="center">
-    <a href="images/Arduino-Based LED Voltage Safety Indicator/arduino project test.mov">
-      <img src="images/Arduino-Based LED Voltage Safety Indicator/arduino project.jpg" width="70%" style="border:1px solid #aaa; padding:4px;" />
+    <a href="https://www.youtube.com/shorts/raxLwL-MZvY">
+      <img src="images/Arduino Voltage Indicator/arduino project.jpg" width="70%" style="border:1px solid #aaa; padding:4px;" />
     </a>
     <br>
-    <sub>Click the image to view the Arduino voltage indicator demo showing LED state transitions as the potentiometer input changes.</sub>
+    <strong>▶ Watch Demo Video</strong>
+    <br>
+    <sub>Arduino voltage indicator demo showing LED state transitions as the potentiometer input changes.</sub>
   </p>
 </details>
 
