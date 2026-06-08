@@ -1,8 +1,8 @@
 # 👋 Hi, I’m Krrish Kapoor
 
-🎓 **Mechatronic Systems Engineering Student**  
-📍  Langley, BC | Simon Fraser University  
- Mechanical • Electrical • Computational Systems
+**Mechatronic Systems Engineering Student**  
+Langley, BC | Simon Fraser University  
+Electrical • Mechanical • Computational Systems
 
 I’m a Mechatronics Engineering student with a strong interest in modeling, analyzing, and designing multidisciplinary systems that integrate mechanical structures, electrical circuits, and computational tools. My experience spans structural mechanics, dynamic systems, circuit analysis, and experimental validation using both simulation and real-world measurements.
 
@@ -10,16 +10,28 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
 
 ## Technical Skills
 
-**Programming & Computation**
-- Python
-- MATLAB
-- Git
-
-**Engineering Tools**
+**Electrical & Simulation Tools**
 - Multisim
-- Granta EduPack
 - Arduino
+- Circuit Design
+- Breadboarding
+- Oscilloscopes
+- Wiring and Hardware Testing
+
+**Mechanical & Design Tools**
 - AutoCAD
+- Granta EduPack
+- Engineering Drawings
+- Schematics
+- Technical Documentation
+- Material Selection
+
+**Programming & Computation**
+- MATLAB
+- Python
+- Git
+- Data Analysis
+- Input Validation
 
 ---
 
