@@ -177,7 +177,7 @@ The final prototype successfully provided real-time LED feedback across three vo
 
   <p align="center">
     <a href="https://www.youtube.com/shorts/raxLwL-MZvY">
-      <img src="images/Arduino Voltage Indicator/arduino project.jpg" width="70%" style="border:1px solid #aaa; padding:4px;" />
+      <img src="images/Arduino-Based LED Voltage Safety Indicator/arduino project.jpg" width="70%" style="border:1px solid #aaa; padding:4px;" />
     </a>
     <br>
     <strong>▶ Watch Demo Video</strong>
