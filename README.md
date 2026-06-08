@@ -10,7 +10,7 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
 
 ## Technical Skills
 
-**Electrical & Simulation Tools**
+**Electrical & Simulation Tools**               
 - Multisim
 - Arduino
 - Circuit Design
