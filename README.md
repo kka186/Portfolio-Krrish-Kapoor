@@ -97,63 +97,6 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
 
 ---
 
-# Verdant - Environmental Monitoring Platform
-
-<details>
-  <summary><b>What?</b></summary>
-  <br>
-
-  The objective of this project was to design and develop a climate resilience dashboard that helps companies, city agencies, and urban planners identify urban heat islands and make more informed green infrastructure decisions. Verdant was created to transform environmental and geospatial data into an interactive platform for locating high-risk areas and evaluating where cooling interventions may have the greatest impact.
-
-  By combining urban temperature data, regional comparisons, and map-based visualization, the platform provides decision-makers with a clear view of climate-related conditions across a city. The project focused on making large-scale environmental data accessible and actionable through an interface that supports climate-conscious planning.
-
-  <p align="center">
-    <img src="images/Verdant/landing-page.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
-    <sub>Verdant landing page introducing the platform’s focus on climate resilience and urban heat analysis.</sub>
-  </p>
-</details>
-
-<details>
-  <summary><b>How?</b></summary>
-  <br>
-
-Verdant was built by combining open-source environmental data, AI-assisted data processing, and web-based geospatial visualization into a single climate analysis platform. Public APIs from NASA were used as the core source of satellite and sensor data for heat mapping, while AI models were used to parse raw environmental data from multiple sources and support the platform’s analysis workflow. OpenStreetMap and Mapbox were then used to translate this data into interactive 2D and 3D maps that highlight hotspot zones, vulnerable areas, and potential green infrastructure opportunities.
-
-The dashboard was developed as a web application using Next.js, React, Tailwind, TanStack Query, and Zustand, with interface and visual design support from Figma and Adobe Illustrator. Interactive layers, charts, and recommendation panels were incorporated so that companies, agencies, and planning stakeholders could compare regions, assess projected cooling impacts, and identify where infrastructure investments may provide the greatest benefit.
-
-  <table align="center">
-    <tr>
-
-  <table align="center">
-    <tr>
-      <td align="center" width="50%">
-        <img src="images/Verdant/how-layer-dashboard.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Dashboard view showing map layers, geospatial heat mapping, and hotspot analysis.</sub>
-      </td>
-      <td align="center" width="50%">
-        <img src="images/Verdant/how-3d-dashboard.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>3D visualization used to analyze hotspot zones and infrastructure opportunities.</sub>
-      </td>
-    </tr>
-  </table>
-</details>
-
-<details>
-  <summary><b>Result</b></summary>
-  <br>
-
-  The final outcome of this project was a functional climate resilience dashboard capable of visualizing urban heat patterns, identifying hotspot zones, and presenting green infrastructure recommendations through an interactive interface. Verdant translated raw environmental and geospatial data into a usable planning tool for comparing regions, evaluating vulnerability, and assessing where cooling strategies may provide the greatest benefit.
-
-  The completed platform demonstrated a practical application of environmental data analysis, geospatial visualization, and user-focused dashboard design. Verdant was recognized at XHacks 2026, where it received the **SFU SURGE Systems for Scale** award.
-
-  <p align="center">
-    <img src="images/Verdant/result-dashboard.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
-    <sub>Final Verdant dashboard showing hotspot mapping, environmental metrics, and green infrastructure recommendations.</sub>
-  </p>
-</details>
-
----
-
 # Transient Response of Multi-Resistor RC Circuits Using Multisim
 
 <details>
@@ -190,6 +133,67 @@ measure the time constant. The circuit topology included a switch where I must v
     <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/time_constant.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
     <sub>Simulated step-response curve with effective time constant.</sub>
   </p>
+</details>
+
+---
+# Arduino-Based LED Voltage Safety Indicator
+
+<details>
+  <summary><b>What?</b></summary>
+  <br>
+
+The objective of this project was to design and build a voltage monitoring prototype that classifies a variable 0 to 5 V input signal into three LED output states. The system was designed to provide real-time visual feedback based on measured voltage ranges, helping show how a simple hardware circuit can respond to changing analog input conditions.
+
+The prototype used an Arduino UNO R3, potentiometer, three LEDs, resistors, and breadboard wiring. As the potentiometer adjusted the input voltage, the Arduino read the analog signal and activated the correct LED based on programmed threshold ranges.
+
+  <table align="center">
+    <tr>
+      <td align="center" width="50%">
+        <img src="images/Arduino Voltage Indicator/arduino_setup.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Arduino UNO R3 voltage monitoring prototype built on a breadboard.</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="images/Arduino Voltage Indicator/circuit_closeup.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Breadboard wiring layout with potentiometer, resistors, and LED output states.</sub>
+      </td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><b>How?</b></summary>
+  <br>
+
+I built the circuit on a breadboard by connecting the potentiometer to an Arduino analog input pin and wiring three LEDs as digital output indicators. The potentiometer was used to vary the input signal across the 0 to 5 V range, allowing the Arduino to continuously read the changing analog voltage.
+
+I programmed the Arduino to classify the analog voltage reading into low, medium, and high voltage ranges. Each range activated a different LED output state. I then tested the prototype by adjusting the potentiometer and observing whether the LED transitions matched the intended threshold values. During testing, I refined the threshold ranges and troubleshot wiring, LED output issues, and inconsistent state-transition behaviour.
+
+  <p align="center">
+    <img src="images/Arduino Voltage Indicator/arduino_code.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <sub>Arduino threshold logic used to classify analog voltage readings into LED output states.</sub>
+  </p>
+</details>
+
+<details>
+  <summary><b>Result</b></summary>
+  <br>
+
+The final prototype successfully provided real-time LED feedback across three voltage states. As the potentiometer changed the input voltage, the Arduino activated the correct LED based on the programmed threshold range. After testing, the output became more reliable by refining the threshold values and fixing inconsistent LED transitions.
+
+This project strengthened my hands-on experience with Arduino prototyping, circuit design, breadboarding, wiring, hardware testing, troubleshooting, design validation, and technical documentation.
+
+  <table align="center">
+    <tr>
+      <td align="center" width="50%">
+        <img src="images/Arduino Voltage Indicator/led_low_state.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Low-voltage operating state indicated by the first LED output.</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="images/Arduino Voltage Indicator/led_high_state.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>High-voltage operating state indicated after adjusting the potentiometer input.</sub>
+      </td>
+    </tr>
+  </table>
 </details>
 
 ---
@@ -305,6 +309,62 @@ Identified Nickel-based superalloys as the best overall choice (balanced fatigue
 </details>
 
 ---
+
+# Verdant - Environmental Monitoring Platform
+
+<details>
+  <summary><b>What?</b></summary>
+  <br>
+
+  The objective of this project was to design and develop a climate resilience dashboard that helps companies, city agencies, and urban planners identify urban heat islands and make more informed green infrastructure decisions. Verdant was created to transform environmental and geospatial data into an interactive platform for locating high-risk areas and evaluating where cooling interventions may have the greatest impact.
+
+  By combining urban temperature data, regional comparisons, and map-based visualization, the platform provides decision-makers with a clear view of climate-related conditions across a city. The project focused on making large-scale environmental data accessible and actionable through an interface that supports climate-conscious planning.
+
+  <p align="center">
+    <img src="images/Verdant/landing-page.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <sub>Verdant landing page introducing the platform’s focus on climate resilience and urban heat analysis.</sub>
+  </p>
+</details>
+
+<details>
+  <summary><b>How?</b></summary>
+  <br>
+
+Verdant was built by combining open-source environmental data, AI-assisted data processing, and web-based geospatial visualization into a single climate analysis platform. Public APIs from NASA were used as the core source of satellite and sensor data for heat mapping, while AI models were used to parse raw environmental data from multiple sources and support the platform’s analysis workflow. OpenStreetMap and Mapbox were then used to translate this data into interactive 2D and 3D maps that highlight hotspot zones, vulnerable areas, and potential green infrastructure opportunities.
+
+The dashboard was developed as a web application using Next.js, React, Tailwind, TanStack Query, and Zustand, with interface and visual design support from Figma and Adobe Illustrator. Interactive layers, charts, and recommendation panels were incorporated so that companies, agencies, and planning stakeholders could compare regions, assess projected cooling impacts, and identify where infrastructure investments may provide the greatest benefit.
+
+  <table align="center">
+    <tr>
+
+  <table align="center">
+    <tr>
+      <td align="center" width="50%">
+        <img src="images/Verdant/how-layer-dashboard.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Dashboard view showing map layers, geospatial heat mapping, and hotspot analysis.</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="images/Verdant/how-3d-dashboard.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>3D visualization used to analyze hotspot zones and infrastructure opportunities.</sub>
+      </td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><b>Result</b></summary>
+  <br>
+
+  The final outcome of this project was a functional climate resilience dashboard capable of visualizing urban heat patterns, identifying hotspot zones, and presenting green infrastructure recommendations through an interactive interface. Verdant translated raw environmental and geospatial data into a usable planning tool for comparing regions, evaluating vulnerability, and assessing where cooling strategies may provide the greatest benefit.
+
+  The completed platform demonstrated a practical application of environmental data analysis, geospatial visualization, and user-focused dashboard design. Verdant was recognized at XHacks 2026, where it received the **SFU SURGE Systems for Scale** award.
+
+  <p align="center">
+    <img src="images/Verdant/result-dashboard.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <sub>Final Verdant dashboard showing hotspot mapping, environmental metrics, and green infrastructure recommendations.</sub>
+  </p>
+</details>
+
 
 ## 📫 Contact & Links
 
