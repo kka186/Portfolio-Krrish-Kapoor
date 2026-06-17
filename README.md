@@ -4,8 +4,14 @@
 Langley, BC | Simon Fraser University  
 Electrical • Mechanical • Computational Systems
 
+
 I’m a Mechatronics Engineering student with a strong interest in modeling, analyzing, and designing multidisciplinary systems that integrate mechanical structures, electrical circuits, and computational tools. My experience spans structural mechanics, dynamic systems, circuit analysis, and experimental validation using both simulation and real-world measurements.
 
+
+## Contact & Links
+
+LinkedIn: *https://www.linkedin.com/in/krrish-kapoor-957b07310/*
+Email: k_kapoor1@outlook.com
 ---
 
 ## Technical Skills
@@ -354,12 +360,6 @@ The dashboard was developed as a web application using Next.js, React, Tailwind,
     <sub>Final Verdant dashboard showing hotspot mapping, environmental metrics, and green infrastructure recommendations.</sub>
   </p>
 </details>
-
-
-## 📫 Contact & Links
-
-- 💼 LinkedIn: *https://www.linkedin.com/in/krrish-kapoor-957b07310/*
-- 📧 Email: kka186@sfu.ca
 
 ---
 
