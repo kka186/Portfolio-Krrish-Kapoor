@@ -4,10 +4,9 @@
 Langley, BC | Simon Fraser University  
 Electrical • Mechanical • Computational Systems
 
-Email: k_kapoor1@outlook.com
-
 I’m a Mechatronics Engineering student with a strong interest in modeling, analyzing, and designing multidisciplinary systems that integrate mechanical structures, electrical circuits, and computational tools. My experience spans structural mechanics, dynamic systems, circuit analysis, and experimental validation using both simulation and real-world measurements.
 
+Email: k_kapoor1@outlook.com
 ---
 
 ## Technical Skills
