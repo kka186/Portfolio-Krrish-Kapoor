@@ -11,7 +11,7 @@ I’m a Mechatronics Engineering student with a strong interest in modeling, ana
 ## Contact & Links
 
 LinkedIn: *https://www.linkedin.com/in/krrish-kapoor-957b07310/*
-Email: k_kapoor1@outlook.com
+   Email: k_kapoor1@outlook.com
 ---
 
 ## Technical Skills
