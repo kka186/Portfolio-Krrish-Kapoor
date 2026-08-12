@@ -112,11 +112,11 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
   <table align="center">
     <tr>
       <td align="center" width="50%">
-        <img src="images/MasterPi Line Tracking and Obstacle Removal/masterpi-robot.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/top_masterpi.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
         <sub>HiWonder MasterPi robot equipped with mecanum wheels, a camera, ultrasonic sensing, and a robotic arm.</sub>
       </td>
       <td align="center" width="50%">
-        <img src="images/MasterPi Line Tracking and Obstacle Removal/testing-course.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/close_up_masterpi.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
         <sub>Track and obstacle arrangement used to test autonomous navigation and obstacle removal.</sub>
       </td>
     </tr>
@@ -159,30 +159,39 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
 
   Initial trials showed that the robot could overshoot the track or pass too close to the obstacle. We improved the avoidance route by adjusting its movement speed, movement duration, detection threshold, and arm position. A five-second pause was also added after the avoidance sequence so the camera feed could recover before line tracking resumed.
 
-  <p align="center">
-    <a href="https://youtube.com/shorts/Q9cIQFnKc3c">
-      <img src="images/MasterPi Line Tracking and Obstacle Removal/obstacle-avoidance.jpg" width="75%" style="border:1px solid #aaa; padding:4px;" />
-    </a>
-    <br>
-    <strong>Click the Thumbnail to Watch the Obstacle-Avoidance Demo</strong>
-    <br>
-    <sub>Project 1 demonstration showing the MasterPi detecting an obstacle, routing around it, and returning to the line.</sub>
-  </p>
+<p align="center">
+  <a href="https://youtube.com/shorts/Q9cIQFnKc3c">
+    <img
+      src="https://img.youtube.com/vi/Q9cIQFnKc3c/maxresdefault.jpg"
+      alt="MasterPi obstacle-avoidance demonstration"
+      width="75%"
+      style="border:1px solid #aaa; padding:4px;"
+    />
+  </a>
+  <br>
+  <strong>Click the Thumbnail to Watch the Obstacle-Avoidance Demo</strong>
+  <br>
+  <sub>Project 1 demonstration showing the MasterPi detecting an obstacle, routing around it, and returning to the line.</sub>
+</p>
 
   Project 1.2 extended the original navigation system by replacing the fixed avoidance route with a robotic obstacle-removal routine. When the ultrasonic sensor detected an obstacle within the specified threshold, the robot stopped and activated its arm. The gripper picked up the obstacle from the front, the arm moved it beside the track, and the robot returned to its line-tracking configuration.
 
   During testing, inconsistent distance measurements and unreachable arm coordinates sometimes prevented the robot from grasping the obstacle. We improved the system by reducing the detection threshold, changing the arm’s starting position, approaching the obstacle from the front, and using calibrated servo positions for the pickup motion. Inverse kinematics was then used to move the obstacle to its placement location.
 
-  <p align="center">
-    <a href="https://www.youtube.com/shorts/EvxUfx9MQqQ">
-      <img src="images/MasterPi Line Tracking and Obstacle Removal/obstacle-removal.jpg" width="75%" style="border:1px solid #aaa; padding:4px;" />
-    </a>
-    <br>
-    <strong>Click the Thumbnail to Watch the Obstacle-Removal Demo</strong>
-    <br>
-    <sub>Project 1.2 demonstration showing the MasterPi detecting, picking up, and moving an obstacle away from the track.</sub>
-  </p>
-</details>
+<p align="center">
+  <a href="https://www.youtube.com/shorts/EvxUfx9MQqQ">
+    <img
+      src="https://img.youtube.com/vi/EvxUfx9MQqQ/maxresdefault.jpg"
+      alt="MasterPi robotic obstacle-removal demonstration"
+      width="75%"
+      style="border:1px solid #aaa; padding:4px;"
+    />
+  </a>
+  <br>
+  <strong>Click the Thumbnail to Watch the Obstacle-Removal Demo</strong>
+  <br>
+  <sub>Project 1.2 demonstration showing the MasterPi detecting, picking up, and moving an obstacle away from the track.</sub>
+</p>
 
 ---
 
