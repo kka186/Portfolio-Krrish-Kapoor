@@ -192,7 +192,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
   <br>
   <sub>Project 1.2 demonstration showing the MasterPi detecting, picking up, and moving an obstacle away from the track.</sub>
 </p>
-
+</details>
 ---
 
 # Arduino-Based LED Voltage Safety Indicator
