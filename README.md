@@ -112,11 +112,11 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
   <table align="center">
     <tr>
       <td align="center" width="50%">
-        <img src="images/MasterPi Line Tracking and Obstacle Removal/top_masterpi.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <img src="images/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/top_masterpi.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
         <sub>HiWonder MasterPi robot equipped with mecanum wheels, a camera, ultrasonic sensing, and a robotic arm.</sub>
       </td>
       <td align="center" width="50%">
-        <img src="images/MasterPi Line Tracking and Obstacle Removal/close_up_masterpi.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <img src="images/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/close_up_masterpi.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
         <sub>Track and obstacle arrangement used to test autonomous navigation and obstacle removal.</sub>
       </td>
     </tr>
@@ -138,11 +138,11 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
  <table align="center">
     <tr>
       <td align="center" width="50%">
-        <img src="images/MasterPi Line Tracking and Obstacle Removal/motor_control.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <img src="images/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/motor_control.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
         <sub>Project 1 Python code converting the PID output into individual motor speeds and executing the left-forward-right obstacle-avoidance route.</sub>
       </td>
       <td align="center" width="50%">
-        <img src="images/MasterPi Line Tracking and Obstacle Removal/inverse_kinematics.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <img src="images/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/inverse_kinematics.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
         <sub>Project 1.2 Python code using calibrated servo movements and inverse kinematics to lift, place, and release the obstacle beside the track.</sub>
       </td>
     </tr>
