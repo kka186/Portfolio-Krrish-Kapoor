@@ -117,7 +117,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
       </td>
       <td align="center" width="50%">
         <img src="images/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/close_up_masterpi.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Track and obstacle arrangement used to test autonomous navigation and obstacle removal.</sub>
+        <sub>Arm and camera configuration on the MasterPi.</sub>
       </td>
     </tr>
   </table>
