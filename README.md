@@ -103,9 +103,11 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
   <summary><b>What?</b></summary>
   <br>
 
-  The objective of this project was to program a Raspberry Pi-powered HiWonder MasterPi robot to autonomously follow a coloured line, detect an obstacle blocking its path, and move the obstacle aside using its five-degree-of-freedom robotic arm.
+  The objective of this project was to program a Raspberry Pi-powered HiWonder MasterPi robot to autonomously follow a coloured line and respond to an obstacle blocking its path. The project was completed in two stages using the robot’s camera, ultrasonic sensor, four mecanum wheels, and five-degree-of-freedom robotic arm.
 
-  This project extended an earlier obstacle-avoidance system in which the robot followed a fixed left-forward-right route around an object. In the updated system, the robot stopped when its ultrasonic sensor detected an obstacle, picked it up, placed it beside the track, and then resumed line tracking. The project combined computer vision, PID-based motor control, ultrasonic sensing, servo control, and inverse kinematics in one autonomous navigation system.
+  In Project 1, the robot followed the line, detected an obstacle using its ultrasonic sensor, and travelled around it using a programmed left-forward-right avoidance route. After passing the obstacle, the robot returned to the track and resumed line tracking.
+
+  Project 1.2 extended this system by replacing the fixed avoidance route with an obstacle-removal routine. Instead of driving around the object, the robot stopped, picked it up with its gripper, moved it beside the track, and returned its arm to the line-tracking position.
 
   <table align="center">
     <tr>
@@ -125,25 +127,30 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
   <summary><b>How?</b></summary>
   <br>
 
-  The robot processed its live camera feed in Python using OpenCV. Each frame was blurred to reduce visual noise and divided into three weighted regions of interest. The regions were converted from BGR to LAB colour space and filtered using calibrated colour limits to isolate the track. Erosion and dilation reduced interference, while contour detection identified the largest visible section of the line. The weighted centre points of the three regions were then combined to estimate the line’s position relative to the centre of the camera.
+  We developed the project in Python using the MasterPi’s provided OpenCV, PID, motor-control, ultrasonic-sensor, and robotic-arm libraries. Within this framework, we implemented the colour mask used to isolate the track, converted the PID output into individual motor speeds, programmed the obstacle-avoidance route, and later developed the obstacle-removal sequence.
 
-  A PID controller used this position error to continuously adjust the speeds of the left and right motors. Increasing the speed on one side while decreasing it on the other allowed the robot to correct its direction and remain centred on straight and curved sections of the track.
+  For line tracking, the camera image was converted to LAB colour space and filtered using `cv2.inRange()` with calibrated colour limits. Erosion and dilation reduced visual noise before the program identified the largest visible contour. The track’s position was calculated from three weighted regions of the camera image and compared with the centre of the frame to produce a steering error.
 
-  The ultrasonic sensor continuously measured the distance in front of the robot, and several readings were averaged to reduce false detections. When an obstacle came within the 18 cm threshold, the drive motors stopped and the pick-and-place routine began. Servo commands positioned and closed the gripper around the obstacle, while an inverse-kinematics command moved the arm to the placement coordinates beside the track. The gripper then released the obstacle, and the arm returned to its line-tracking position.
+  The PID controller converted this error into a `base_speed` correction. Our Python code added or subtracted this correction from the four motor speeds, allowing the robot to steer toward the line and correct its direction along straight and curved sections of the track.
+
+  In Project 1, the ultrasonic sensor measured the distance in front of the robot. When an obstacle was detected, the program stopped line tracking and activated our timed avoidance routine. Using `chassis.set_velocity()`, we programmed the mecanum wheels to move the robot left, forward past the obstacle, and right to return to the track. We adjusted the movement speed and timing through repeated testing to prevent the robot from overshooting the track or passing too close to the obstacle.
+
+  In Project 1.2, we replaced the fixed avoidance route with Python code for robotic obstacle removal. When the measured distance fell below the updated 18 cm threshold, the program stopped all four motors and activated the pick-and-place sequence. We configured the arm’s starting position and used calibrated `Board.setPWMServoPulse()` commands to close the gripper, lift the obstacle, and rotate the arm. An `AK.setPitchRangeMoving()` inverse-kinematics command then moved the obstacle to its placement coordinates beside the track. The gripper released the obstacle before the arm returned to its line-tracking position.
 
   <table align="center">
     <tr>
       <td align="center" width="50%">
-        <img src="images/MasterPi Line Tracking and Obstacle Removal/line-tracking-output.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Processed camera output showing the detected track and calculated line position.</sub>
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/avoidance-code.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Project 1 Python code adjusting the motor speeds and executing the left-forward-right obstacle-avoidance route.</sub>
       </td>
       <td align="center" width="50%">
-        <img src="images/MasterPi Line Tracking and Obstacle Removal/pick-place-code.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Sonar-triggered pick-and-place routine combining servo control and inverse kinematics.</sub>
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/obstacle-removal-code.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Project 1.2 Python code combining ultrasonic detection, calibrated servo control, and inverse kinematics to remove the obstacle.</sub>
       </td>
     </tr>
   </table>
 </details>
+
 <details>
   <summary><b>Result</b></summary>
   <br>
@@ -153,7 +160,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
   Initial trials showed that the robot could overshoot the track or pass too close to the obstacle. We improved the avoidance route by adjusting its movement speed, movement duration, detection threshold, and arm position. A five-second pause was also added after the avoidance sequence so the camera feed could recover before line tracking resumed.
 
   <p align="center">
-    <a href="PASTE_PROJECT_1_YOUTUBE_LINK_HERE">
+    <a href="https://youtube.com/shorts/Q9cIQFnKc3c">
       <img src="images/MasterPi Line Tracking and Obstacle Removal/obstacle-avoidance.jpg" width="75%" style="border:1px solid #aaa; padding:4px;" />
     </a>
     <br>
@@ -167,7 +174,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
   During testing, inconsistent distance measurements and unreachable arm coordinates sometimes prevented the robot from grasping the obstacle. We improved the system by reducing the detection threshold, changing the arm’s starting position, approaching the obstacle from the front, and using calibrated servo positions for the pickup motion. Inverse kinematics was then used to move the obstacle to its placement location.
 
   <p align="center">
-    <a href="PASTE_PROJECT_1_2_YOUTUBE_LINK_HERE">
+    <a href="https://www.youtube.com/shorts/EvxUfx9MQqQ">
       <img src="images/MasterPi Line Tracking and Obstacle Removal/obstacle-removal.jpg" width="75%" style="border:1px solid #aaa; padding:4px;" />
     </a>
     <br>
@@ -175,8 +182,6 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
     <br>
     <sub>Project 1.2 demonstration showing the MasterPi detecting, picking up, and moving an obstacle away from the track.</sub>
   </p>
-
-  Both systems successfully completed their demonstrated trials after iterative testing and calibration. These projects strengthened my experience with Python, OpenCV, PID control, ultrasonic sensing, servo control, inverse kinematics, mecanum-wheel control, autonomous navigation, hardware integration, and robotics testing.
 </details>
 
 ---
