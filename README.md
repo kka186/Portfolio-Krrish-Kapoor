@@ -97,43 +97,76 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
 </details>
 
 ---
-
-# Transient Response of Multi-Resistor RC Circuits Using Multisim
+# Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal
 
 <details>
   <summary><b>What?</b></summary>
   <br>
 
-The objective was to examine the first-order transient response of a multi-resistor circuit containing a dependent source by utilizing Thevenin’s theory to
-measure the time constant. The circuit topology included a switch where I must validate discharging and charging behaviour of the system. 
-  <p align="center">
-    <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/multisim_circuit.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
-    <sub>Multi-resistor RC circuit schematic with a dependent source.</sub>
-  </p>
+  The objective of this project was to program a Raspberry Pi-powered HiWonder MasterPi robot to autonomously follow a coloured line, detect an obstacle blocking its path, and move the obstacle aside using its five-degree-of-freedom robotic arm.
+
+  This project extended an earlier obstacle-avoidance system in which the robot followed a fixed left-forward-right route around an object. In the updated system, the robot stopped when its ultrasonic sensor detected an obstacle, picked it up, placed it beside the track, and then resumed line tracking. The project combined computer vision, PID-based motor control, ultrasonic sensing, servo control, and inverse kinematics in one autonomous navigation system.
+
+  <table align="center">
+    <tr>
+      <td align="center" width="50%">
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/masterpi-robot.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>HiWonder MasterPi robot equipped with mecanum wheels, a camera, ultrasonic sensing, and a robotic arm.</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/testing-course.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Track and obstacle arrangement used to test autonomous navigation and obstacle removal.</sub>
+      </td>
+    </tr>
+  </table>
 </details>
 
 <details>
   <summary><b>How?</b></summary>
   <br>
 
-  An applied step excitation to the circuit created in Multisim was used to further analyze the charging behaviour and obtain the time constant of the system. Using voltage and time cursors on the oscilliscope would then yield the effective time constant of the system. To validate theoretical predictions, I compared simulated behavior with hand calculations using equivalent resistance methods.
+  The robot processed its live camera feed in Python using OpenCV. Each frame was blurred to reduce visual noise and divided into three weighted regions of interest. The regions were converted from BGR to LAB colour space and filtered using calibrated colour limits to isolate the track. Erosion and dilation reduced interference, while contour detection identified the largest visible section of the line. The weighted centre points of the three regions were then combined to estimate the line’s position relative to the centre of the camera.
 
-  <p align="center">
-    <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/circuit_schematic.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
-    <sub>Multisim circuit schematic with the function generator and oscilloscope connected.</sub>
-  </p>
+  A PID controller used this position error to continuously adjust the speeds of the left and right motors. Increasing the speed on one side while decreasing it on the other allowed the robot to correct its direction and remain centred on straight and curved sections of the track.
+
+  The ultrasonic sensor continuously measured the distance in front of the robot, and several readings were averaged to reduce false detections. When an obstacle came within the 18 cm threshold, the drive motors stopped and the pick-and-place routine began. Servo commands positioned and closed the gripper around the obstacle, while an inverse-kinematics command moved the arm to the placement coordinates beside the track. The gripper then released the obstacle, and the arm returned to its line-tracking position.
+
+  <table align="center">
+    <tr>
+      <td align="center" width="50%">
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/line-tracking-output.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Processed camera output showing the detected track and calculated line position.</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/pick-place-code.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Sonar-triggered pick-and-place routine combining servo control and inverse kinematics.</sub>
+      </td>
+    </tr>
+  </table>
 </details>
 
 <details>
   <summary><b>Result</b></summary>
   <br>
 
-  The time constant came out to be 400ms and matched theoretical predictions with zero percent error.
+  The completed robot successfully followed the coloured track, corrected its direction around curves, detected an obstacle, and stopped before making contact. It then picked up the obstacle, moved it beside the track, and returned its arm to the line-tracking position.
 
-  <p align="center">
-    <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/time_constant.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
-    <sub>Simulated step-response curve with effective time constant.</sub>
-  </p>
+  Initial testing showed that inconsistent sonar measurements and arm positioning could prevent the gripper from reaching the obstacle. We improved the pickup reliability by adjusting the detection threshold, changing the arm’s starting position, and approaching the obstacle from the front instead of from above. Part of the pickup sequence used calibrated servo positions because the calculated target was occasionally treated as unreachable, while inverse kinematics was used to move the obstacle to its placement location.
+
+  The robot successfully completed the demonstrated trials after these adjustments. This project strengthened my experience with Python, OpenCV, computer vision, PID control, ultrasonic sensing, servo control, inverse kinematics, mecanum-wheel control, hardware integration, and iterative robotics testing.
+
+  <table align="center">
+    <tr>
+      <td align="center" width="50%">
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/obstacle-pickup.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Robotic arm grasping the detected obstacle after the MasterPi stopped on the track.</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/obstacle-placement.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Obstacle moved away from the track by the completed pick-and-place routine.</sub>
+      </td>
+    </tr>
+  </table>
 </details>
 
 ---
@@ -249,6 +282,46 @@ The final prototype successfully provided real-time LED feedback across three vo
       </td>
     </tr>
   </table>
+</details>
+
+---
+
+# Transient Response of Multi-Resistor RC Circuits Using Multisim
+
+<details>
+  <summary><b>What?</b></summary>
+  <br>
+
+The objective was to examine the first-order transient response of a multi-resistor circuit containing a dependent source by utilizing Thevenin’s theory to
+measure the time constant. The circuit topology included a switch where I must validate discharging and charging behaviour of the system. 
+  <p align="center">
+    <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/multisim_circuit.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <sub>Multi-resistor RC circuit schematic with a dependent source.</sub>
+  </p>
+</details>
+
+<details>
+  <summary><b>How?</b></summary>
+  <br>
+
+  An applied step excitation to the circuit created in Multisim was used to further analyze the charging behaviour and obtain the time constant of the system. Using voltage and time cursors on the oscilliscope would then yield the effective time constant of the system. To validate theoretical predictions, I compared simulated behavior with hand calculations using equivalent resistance methods.
+
+  <p align="center">
+    <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/circuit_schematic.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <sub>Multisim circuit schematic with the function generator and oscilloscope connected.</sub>
+  </p>
+</details>
+
+<details>
+  <summary><b>Result</b></summary>
+  <br>
+
+  The time constant came out to be 400ms and matched theoretical predictions with zero percent error.
+
+  <p align="center">
+    <img src="images/Transient Response of Multi-Resistor RC Circuits Using Multisim/time_constant.png" width="85%" style="border:1px solid #aaa; padding:4px;" /><br>
+    <sub>Simulated step-response curve with effective time constant.</sub>
+  </p>
 </details>
 
 ---
