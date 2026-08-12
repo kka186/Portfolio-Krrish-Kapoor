@@ -141,7 +141,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
       <img src="images/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/motor_control.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
       <sub>Project 1 Python code converting the PID output into individual motor speeds and executing the left-forward-right obstacle-avoidance route.</sub>
       <br><br>
-      <a href="code/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/main_of_project_1.py">
+      <a href="code/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/project_1_obstacle_avoidance.py">
         <b>View Full Obstacle-Avoidance Code</b>
       </a>
     </td>
@@ -149,7 +149,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
       <img src="images/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/inverse_kinematics.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
       <sub>Project 1.2 Python code using calibrated servo movements and inverse kinematics to lift, place, and release the obstacle beside the track.</sub>
       <br><br>
-      <a href="code/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/Main_of_project_1.2.py">
+      <a href="code/Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal/project_1.2_obstacle_removal.py">
         <b>View Full Obstacle-Removal Code</b>
       </a>
     </td>
