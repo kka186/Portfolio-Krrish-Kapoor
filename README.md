@@ -121,8 +121,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
       </td>
     </tr>
   </table>
-</details>
-
+  
 <details>
   <summary><b>How?</b></summary>
   <br>
@@ -155,6 +154,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
     </td>
   </tr>
 </table>
+</details>
 
 <details>
   <summary><b>Result</b></summary>
