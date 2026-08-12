@@ -137,15 +137,15 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
 
   In Project 1.2, we replaced the fixed avoidance route with Python code for robotic obstacle removal. When the measured distance fell below the updated 18 cm threshold, the program stopped all four motors and activated the pick-and-place sequence. We configured the arm’s starting position and used calibrated `Board.setPWMServoPulse()` commands to close the gripper, lift the obstacle, and rotate the arm. An `AK.setPitchRangeMoving()` inverse-kinematics command then moved the obstacle to its placement coordinates beside the track. The gripper released the obstacle before the arm returned to its line-tracking position.
 
-  <table align="center">
+ <table align="center">
     <tr>
       <td align="center" width="50%">
-        <img src="images/MasterPi Line Tracking and Obstacle Removal/avoidance-code.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Project 1 Python code adjusting the motor speeds and executing the left-forward-right obstacle-avoidance route.</sub>
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/motor_control.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Project 1 Python code converting the PID output into individual motor speeds and executing the left-forward-right obstacle-avoidance route.</sub>
       </td>
       <td align="center" width="50%">
-        <img src="images/MasterPi Line Tracking and Obstacle Removal/obstacle-removal-code.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
-        <sub>Project 1.2 Python code combining ultrasonic detection, calibrated servo control, and inverse kinematics to remove the obstacle.</sub>
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/inverse_kinematics.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Project 1.2 Python code using calibrated servo movements and inverse kinematics to lift, place, and release the obstacle beside the track.</sub>
       </td>
     </tr>
   </table>
@@ -193,6 +193,7 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
   <sub>Project 1.2 demonstration showing the MasterPi detecting, picking up, and moving an obstacle away from the track.</sub>
 </p>
 </details>
+
 ---
 
 # Arduino-Based LED Voltage Safety Indicator
