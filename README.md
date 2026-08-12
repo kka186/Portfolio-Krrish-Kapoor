@@ -100,6 +100,51 @@ A mass–spring–damper (MSD) system and a flexible vertical beam were experime
 # Autonomous Line Tracking and Robotic Obstacle Avoidance and Removal
 
 <details>
+  <summary><b>What?</b></summary>
+  <br>
+
+  The objective of this project was to program a Raspberry Pi-powered HiWonder MasterPi robot to autonomously follow a coloured line, detect an obstacle blocking its path, and move the obstacle aside using its five-degree-of-freedom robotic arm.
+
+  This project extended an earlier obstacle-avoidance system in which the robot followed a fixed left-forward-right route around an object. In the updated system, the robot stopped when its ultrasonic sensor detected an obstacle, picked it up, placed it beside the track, and then resumed line tracking. The project combined computer vision, PID-based motor control, ultrasonic sensing, servo control, and inverse kinematics in one autonomous navigation system.
+
+  <table align="center">
+    <tr>
+      <td align="center" width="50%">
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/masterpi-robot.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>HiWonder MasterPi robot equipped with mecanum wheels, a camera, ultrasonic sensing, and a robotic arm.</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/testing-course.jpg" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Track and obstacle arrangement used to test autonomous navigation and obstacle removal.</sub>
+      </td>
+    </tr>
+  </table>
+</details>
+
+<details>
+  <summary><b>How?</b></summary>
+  <br>
+
+  The robot processed its live camera feed in Python using OpenCV. Each frame was blurred to reduce visual noise and divided into three weighted regions of interest. The regions were converted from BGR to LAB colour space and filtered using calibrated colour limits to isolate the track. Erosion and dilation reduced interference, while contour detection identified the largest visible section of the line. The weighted centre points of the three regions were then combined to estimate the line’s position relative to the centre of the camera.
+
+  A PID controller used this position error to continuously adjust the speeds of the left and right motors. Increasing the speed on one side while decreasing it on the other allowed the robot to correct its direction and remain centred on straight and curved sections of the track.
+
+  The ultrasonic sensor continuously measured the distance in front of the robot, and several readings were averaged to reduce false detections. When an obstacle came within the 18 cm threshold, the drive motors stopped and the pick-and-place routine began. Servo commands positioned and closed the gripper around the obstacle, while an inverse-kinematics command moved the arm to the placement coordinates beside the track. The gripper then released the obstacle, and the arm returned to its line-tracking position.
+
+  <table align="center">
+    <tr>
+      <td align="center" width="50%">
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/line-tracking-output.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Processed camera output showing the detected track and calculated line position.</sub>
+      </td>
+      <td align="center" width="50%">
+        <img src="images/MasterPi Line Tracking and Obstacle Removal/pick-place-code.png" width="95%" style="border:1px solid #aaa; padding:4px;" /><br>
+        <sub>Sonar-triggered pick-and-place routine combining servo control and inverse kinematics.</sub>
+      </td>
+    </tr>
+  </table>
+</details>
+<details>
   <summary><b>Result</b></summary>
   <br>
 
